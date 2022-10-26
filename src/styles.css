@@ -1,1 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin');
+@import url('https://css.gg/play-button-o.css');
+
+body {
+    font-family: Ubuntu, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    width: 100%;
+    background-color: #1f2224 !important;
+}
+
+.header {
+    height: 30vh;
+    border-bottom: 3px solid lightgrey;
+    margin: auto;
+    justify-content: center;
+}
+
+.content {
+    border-bottom: 3px solid lightgray;
+    margin: auto;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    color: lightgray;
+    margin: auto;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a{
+    color: lightgray;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.box {
+    background-color: black;
+    height: 100vh;
+    
+}
+
+.playerBox {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player {
+    height: 56.25%;
+}
+
+.channelList {
+    height: 100vh;
+    background-color: rgb(47, 47, 47);
+}
+
+.channel {
+    line-height: 50px;
+    color: lightgray;
+    cursor: pointer;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color:rgb(40, 40, 40)
+
+}
+
+.channel:hover {
+    color: white;
+    transition: color 0.1s linear 0.1s;
+}
+
+.listaPaises {
+    display: block;
+    color: lightgray;
+    margin: 0px 10px;
+    background-color: rgb(47, 47, 47);
+}
+.listaPaises:hover {
+    color: white;
+    transition: color 0.1s linear 0.1s;
+}
+
+.channelLogo {
+    max-height: 20px;
+}
+
+.noChannel {
+    font-size: 20px !important;
+}
+
+.gg-play-button-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,5));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 20px
+}
+
+.gg-play-button-o:hover {
+    transform: scale(var(--ggs,4.5));
+    transition: transform 0.5s ease 0s;
+}
+
+.gg-play-button-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    top: 4px;
+    left: 7px
+}
+
+

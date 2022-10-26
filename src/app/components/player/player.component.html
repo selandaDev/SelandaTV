@@ -1,0 +1,64 @@
+<div *ngIf="playerType == 'tv'">
+
+    <div class="row box">
+
+        <!-- CANALES -->
+        <div class="col-lg-3 channelList overflow-auto m-0 p-0" *ngIf="paises">
+
+            <div *ngIf="selectedCountry != 'none'">
+                <div class="m-3 text-center text-light">
+                    <button class="dropdown-item d-flex justify-content-between" type="button" (click)="seleccionarPais('none')">{{'<'}} Back</button>
+                </div>
+                <div *ngFor="let item of selectedList" class="channel d-flex justify-content-between pr-3 pl-3" (click)="seleccionarCanal(item.id, item.logo, item.website)">
+                    <div>
+                        {{item.name}}
+                    </div>
+                    <div>
+                        <img [src]='item.logo' [alt]='item.name' class="channelLogo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="" *ngIf="selectedCountry == 'none'">
+                <div class="m-3 text-center text-light">
+                    <h5>Select Country</h5>
+                </div>
+                <ul class="listaPaises" style="padding-left: 0px !important;">
+                    <li *ngFor="let pais of paises" class="listaPaises">
+                        <button class="dropdown-item d-flex justify-content-between p-3" type="button" (click)="seleccionarPais(pais.code)">
+                        <div>{{pais.name | slice:0:20}} </div>
+                        <div>{{pais.flag}} </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- TVPLAYER -->
+        <div class="col playerBox">
+            <div class="noChannel text-center text-light" *ngIf="selectedChannel == 'none'">
+                <img [src]='this.canal.logo'><br><br>
+                {{this.canal.nombre}} no emite en abierto, pero puede que en su web si lo hagan<br><br>
+                <a [href]="this.canal.website"><b>{{this.canal.website}}</b></a>
+            </div>
+            <div class="player" *ngIf="selectedChannel != 'none'">
+                    <vg-player (onPlayerReady)="onPlayerReady($event)">
+                        <video 
+                            #myMedia
+                            [vgHls]='selectedChannel'
+                            id="my-video"
+                            type="video/mp4"
+                            controls
+                            autoplay="true" 
+                            crossorigin>
+                         </video>
+                    </vg-player>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+
+
