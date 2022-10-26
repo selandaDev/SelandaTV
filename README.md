@@ -1,6 +1,6 @@
 # Selandatv
 
-Un portal para ver los canales de television que emiten en abierto en todo el mundo usando el reproductor videogular. Construido en Angular.
+Un portal para ver los canales de television que emiten en abierto en todo el mundo, los canales se reciben de una lista dinámica a través de peticiones http y se reproducen en el reproductor videogular. Construido en Angular.
 
 ## Demo
 
