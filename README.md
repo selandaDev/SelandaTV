@@ -1,5 +1,11 @@
 # Selandatv
 
+Un portal para ver los canales de television que emiten en abierto en todo el mundo usando el reproductor videogular. Construido en Angular.
+
+## Demo
+
+<a href="https://selandatv.000webhostapp.com">https://selandatv.000webhostapp.com</a>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
 ## Development server
